@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 + 4 + 5</title>
+</head>
+<body onload="toggleEdge()">
+<form action="">
+    <fieldset>
+        <legend style="">Area Calculator</legend>
+        <table border="20">
+            <tr>
+                <th style="font-weight: bold;" colspan="2">
+                    <select name="Type" id="shape" style="width: 100%" onchange="toggleEdge();" onmouseup="calculateArea()">
+                        <option value="square">Square</option>
+                        <option value="rectangle" >Rectangle</option>
+                        <option value="rightTriangle" >Right Triangle</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <td><input type="number" id="firstEdgeValue" onkeyup="calculateArea();" style="height: 100%"></td>
+                <td>
+                    <p id="firstEdgeLabel">First Edge</p>
+                </td>
+            </tr>
+            <tr id="secondEdge">
+                <td><input type="number" id="secondEdgeValue" onkeyup="calculateArea();" style="height: 100%"></td>
+                <td>
+                    <p id="secondEdgeLabel">Second Edge</p>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="number" id="area"  style="height: 100%" readonly></td>
+                <td>
+                    <p>Area</p>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="script.js"></script>
+</form>
+</body>
+</html>
